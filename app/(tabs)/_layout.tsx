@@ -17,12 +17,49 @@ const TabLayout = () => (
     <Tabs.Screen
       name="index"
       options={{
-        title: Locales.t('titleHome'),
+        title: 'BotLand',
+        tabBarLabel: 'Home',
+        headerRight: () => (
+          <>
+            <Tooltip title="Search">
+              <Appbar.Action
+                icon="magnify"
+                onPress={() => router.push('/chats/search')}
+              />
+            </Tooltip>
+          </>
+        ),
         tabBarIcon: (props) => (
           <MaterialCommunityIcons
             {...props}
             size={24}
             name={props.focused ? 'home' : 'home-outline'}
+          />
+        ),
+      }}
+    />
+    <Tabs.Screen
+      name="bots"
+      options={{
+        title: 'Bots',
+        tabBarIcon: (props) => (
+          <MaterialCommunityIcons
+            {...props}
+            size={24}
+            name={props.focused ? 'robot-excited' : 'robot-outline'}
+          />
+        ),
+      }}
+    />
+    <Tabs.Screen
+      name="profile"
+      options={{
+        title: 'Profile',
+        tabBarIcon: (props) => (
+          <MaterialCommunityIcons
+            {...props}
+            size={24}
+            name={props.focused ? 'account' : 'account-outline'}
           />
         ),
       }}
@@ -37,12 +74,6 @@ const TabLayout = () => (
               <Appbar.Action
                 icon="card-multiple-outline"
                 onPress={() => router.push('/modal')}
-              />
-            </Tooltip>
-            <Tooltip title={Locales.t('drawerNav')}>
-              <Appbar.Action
-                icon="gesture-swipe"
-                onPress={() => router.push('/drawer/')}
               />
             </Tooltip>
           </>

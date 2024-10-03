@@ -7,9 +7,6 @@ import {
   Menu,
   Button,
   IconButton,
-  Text,
-  Divider,
-  Chip,
   Snackbar,
   Icon,
 } from 'react-native-paper'
@@ -263,31 +260,6 @@ const Settings = () => {
           </List.AccordionGroup>
         </Surface>
       )}
-
-      <Surface
-        elevation={0}
-        style={{
-          flex: 1,
-          gap: 16,
-          padding: 32,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        <Text variant="displaySmall">{Locales.t('titleSettings')}</Text>
-
-        <Divider />
-
-        <Text variant="bodyLarge">{Locales.t('openScreenCode')}</Text>
-
-        <Chip textStyle={{ fontFamily: 'JetBrainsMono_400Regular' }}>
-          app/(tabs)/settings.tsx
-        </Chip>
-
-        <Text variant="bodyLarge" style={{ textAlign: 'center' }}>
-          {Locales.t('changeScreenCode')}
-        </Text>
-      </Surface>
 
       <Button
         mode="contained"

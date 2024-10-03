@@ -2,6 +2,7 @@
  * Utilities
  */
 
+import API from '@/utils/api'
 import Languages from '@/utils/languages'
 
-export { Languages }
+export { API, Languages }

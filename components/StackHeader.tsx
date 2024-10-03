@@ -16,6 +16,10 @@ const StackHeader = (props: StackHeaderProps) => (
     <Appbar.Content
       title={getHeaderTitle(props.navProps.options, props.navProps.route.name)}
     />
+
+    {props.navProps.options.headerRight
+      ? props.navProps.options.headerRight({ canGoBack: true })
+      : undefined}
   </Appbar.Header>
 )
 
